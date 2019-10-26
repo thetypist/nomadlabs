@@ -1175,3 +1175,36 @@ div[class^='max-']{
 .text-color-light{
     color: rgba(0,0,0,0.5);
 }
+
+/* FAQs */
+.faqs-wrap{
+    width: 100%;
+    display: block;
+}
+.faq-wrap{
+    width: 100%;
+    display: block;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid #979797;
+}
+.faq-text{
+    display: none;
+    margin-top: 2rem;
+}
+.display{
+    display: block;
+}
+a.faq-title{
+    display: block;
+    width: 100%; 
+    color: #aaa;
+    font-size: 1.8rem;
+    text-decoration: none;
+    position: relative;
+}
+a.faq-title::after{
+    content: "\f063";
+    font-family: "FontAwesome";
+    position: absolute;
+    right: 0;
+}
