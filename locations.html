@@ -13,6 +13,7 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/carousel.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
         
     </head>
     
@@ -24,8 +25,18 @@
                     <div class="logo-wrap"><a href="index.html">NomadLabs</a></div>
                     <div class="nav-wrap">
                         <ul class="nav">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="locations.html">Locations</a></li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="locations.html">Locations</a>
+                                <ul class="sub-menu">
+                                    <li><a href="listing.html">Brisbane</a></li>
+                                    <li><a href="listing.html">New York</a></li>
+                                    <li><a href="listing.html">Madrid</a></li>
+                                    <li><a href="listing.html">Manila</a></li>
+                                </ul>
+                            </li>
                             <li><a href="experiences.html">Experiences</a></li>
                             <li><a href="blog.html">Blog</a></li>
                             <li><a href="faq.html">FAQ</a></li>
@@ -48,18 +59,18 @@
         <!-- LOCATION GRID IMAGE -->
         <section class="location-img">
             <div class="container pt-1x pb-1x">
-                <h2 class="item-title has-subtitle">Our Locations</h2>
+                <h2 class="item-title no-padding no-margin">Our Locations</h2>
                 <span class="item-subtitle">Check out our popular destinations</span>
                 <div class="img-grid-master-wrap pt-1x">
                     <div class="img-grid-wrap item-3">
-                        <div class="img-grid-item madrid"><span><a href="listing.html">MADRID</a></span></div>
-                        <div class="img-grid-item sydney"><span><a href="listing.html">Sydney</a></span></div>
-                        <div class="img-grid-item nyc"><span><a href="listing.html">NYC</a></span></div>
+                        <div class="img-grid-item madrid" style="background-image: linear-gradient(to right bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/madrid-city-1-red.jpg)"><span><a href="listing.html">MADRID</a></span></div>
+                        <div class="img-grid-item sydney" style="background-image: linear-gradient(to right bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/brisbane-skyline-1-red.jpg)"><span><a href="listing.html">Sydney</a></span></div>
+                        <div class="img-grid-item nyc" style="background-image: linear-gradient(to right bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/melbourne-streetart-1-red.jpg)"><span><a href="listing.html">NYC</a></span></div>
                     </div>
                     <div class="img-grid-wrap item-3">
-                        <div class="img-grid-item madrid"><span><a href="listing.html">MADRID</a></span></div>
-                        <div class="img-grid-item sydney"><span><a href="listing.html">Sydney</a></span></div>
-                        <div class="img-grid-item nyc"><span><a href="listing.html">NYC</a></span></div>
+                        <div class="img-grid-item madrid" style="background-image: linear-gradient(to right bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/madrid-city-1-red.jpg)"><span><a href="listing.html">MADRID</a></span></div>
+                        <div class="img-grid-item sydney" style="background-image: linear-gradient(to right bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/brisbane-skyline-1-red.jpg)"><span><a href="listing.html">Sydney</a></span></div>
+                        <div class="img-grid-item nyc" style="background-image: linear-gradient(to right bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/melbourne-streetart-1-red.jpg)"><span><a href="listing.html">NYC</a></span></div>
                     </div>
                 </div>
             </div>
@@ -74,7 +85,7 @@
         <!-- FEATURED LABS -->
         <section class="featured-labs">
             <div class="container pt-1x pb-1x">
-                <h2 class="item-title has-subtitle">Featured Labs</h2>
+                <h2 class="item-title no-margin no-padding">Featured Labs</h2>
                 <span class="item-subtitle">Labs near your location</span>  
                 <!-- Feature labs list -->
                 <div class="carousel js-carousel type-card-details">
@@ -292,7 +303,7 @@
         <!-- FEATURED Experiences -->
         <section class="featured-experiences">
             <div class="container pt-1x pb-1x">
-                <h2 class="item-title has-subtitle">Featured Experiences & Workshops</h2>
+                <h2 class="item-title no-margin no-padding">Featured Experiences & Workshops</h2>
                 <span class="item-subtitle">Labs near your location</span>  
                 <!-- Feature experiences list -->
                 <div class="carousel js-carousel type-card-details">

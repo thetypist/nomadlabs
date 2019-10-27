@@ -10,17 +10,7 @@
         <link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="//code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/carousel.js"></script>
-
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $(document).on('click','.faq-title',function(e){
-                    e.preventDefault();
-                    e.stopPropagation();
-                    $(this).parent().find(".faq-text").slideToggle();
-                })
-            })
-        </script>
-        
+        <script type="text/javascript" src="js/script.js"></script>
     </head>
     
     <body>
@@ -31,8 +21,18 @@
                     <div class="logo-wrap"><a href="index.html">NomadLabs</a></div>
                     <div class="nav-wrap">
                         <ul class="nav">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="locations.html">Locations</a></li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="locations.html">Locations</a>
+                                <ul class="sub-menu">
+                                    <li><a href="listing.html">Brisbane</a></li>
+                                    <li><a href="listing.html">New York</a></li>
+                                    <li><a href="listing.html">Madrid</a></li>
+                                    <li><a href="listing.html">Manila</a></li>
+                                </ul>
+                            </li>
                             <li><a href="experiences.html">Experiences</a></li>
                             <li><a href="blog.html">Blog</a></li>
                             <li><a href="faq.html">FAQ</a></li>

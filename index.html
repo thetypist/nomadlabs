@@ -13,7 +13,7 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/carousel.js"></script>
-        
+        <script type="text/javascript" src="js/script.js"></script>        
     </head>
     
     <body>
@@ -24,8 +24,18 @@
                     <div class="logo-wrap"><a href="index.html">NomadLabs</a></div>
                     <div class="nav-wrap">
                         <ul class="nav">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="locations.html">Locations</a></li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="locations.html">Locations</a>
+                                <ul class="sub-menu">
+                                    <li><a href="listing.html">Brisbane</a></li>
+                                    <li><a href="listing.html">New York</a></li>
+                                    <li><a href="listing.html">Madrid</a></li>
+                                    <li><a href="listing.html">Manila</a></li>
+                                </ul>
+                            </li>
                             <li><a href="experiences.html">Experiences</a></li>
                             <li><a href="blog.html">Blog</a></li>
                             <li><a href="faq.html">FAQ</a></li>
@@ -94,7 +104,7 @@
                     <div class="p-2x"><h2 class="grid-content-title">Why choose us?</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electr.</p></div>
                 </div>
-                <div class="flex-1" style="background-image: url(design-thinking-workshop-1-red.jpg)"></div>
+                <div class="flex-1" style="background-image: url(img/design-thinking-workshop-1-red.jpg)"></div>
             </div>
         </section>
         
@@ -105,14 +115,14 @@
                 <div class="carousel js-carousel type-card">
                     <div class="carousel__container js-carousel-container">
                         <div class="carousel__list js-carousel-list">
-                            <div class="carousel__item js-carousel-item brisbane">Brisbane</div>
-                            <div class="carousel__item js-carousel-item new-york">New York</div>
-                            <div class="carousel__item js-carousel-item madrid">Madrid</div>
-                            <div class="carousel__item js-carousel-item manila">Manila</div>
-                            <div class="carousel__item js-carousel-item melbourne">Melbourne</div>
-                            <div class="carousel__item js-carousel-item montreal">Montreal</div>
-                            <div class="carousel__item js-carousel-item sydney">Sydney</div>
-                            <div class="carousel__item js-carousel-item tokyo">Tokyo</div>
+                            <div class="carousel__item js-carousel-item brisbane" data-href='listing.html' style="background-image: url(img/brisbane-koala-1-red.jpg);"><a href="listing.html">Brisbane</a></div>
+                            <div class="carousel__item js-carousel-item new-york" data-href='listing.html' style="background-image: url(img/new-york-taxi-card-1-red.jpg)"><a href="listing.html">New York</a></div>
+                            <div class="carousel__item js-carousel-item madrid" data-href='listing.html' style="background-image: url(img/manila-skyline-1-red.jpg);"><a href="listing.html">Madrid</a></div>
+                            <div class="carousel__item js-carousel-item manila" data-href='listing.html' style="background-image: url(img/melbourne-card-1-red.jpg);"><a href="listing.html">Manila</a></div>
+                            <div class="carousel__item js-carousel-item melbourne" data-href='listing.html' style="background-image: url(img/montreal-card-1-red.jpg);"><a href="listing.html">Melbourne</a></div>
+                            <div class="carousel__item js-carousel-item new-york" data-href='listing.html' style="background-image: url(img/new-york-taxi-card-1-red.jpg)"><a href="listing.html">New York</a></div>
+                            <div class="carousel__item js-carousel-item madrid" data-href='listing.html' style="background-image: url(img/manila-skyline-1-red.jpg);"><a href="listing.html">Madrid</a></div>
+                            <div class="carousel__item js-carousel-item melbourne"  data-href='listing.html' style="background-image: url(img/montreal-card-1-red.jpg);"><a href="listing.html">Melbourne</a></div>
                         </div>
                     </div>
                     <div class="carousel__nav">
