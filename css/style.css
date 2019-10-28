@@ -362,7 +362,8 @@ form.search-locations input {
 form.search-locations input::placeholder {
     color: #ccc;
     font-family: FontAwesome;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
 }
 .btn {
     background-color: #F8B30F;
@@ -442,8 +443,12 @@ div[class^='flex-']{
     color: white;
     position: relative;
 }
-.grid-content-text:hover p{
+.grid-content-text:hover p,
+    .grid-content-text:hover ul.grid-content-list li{
     color: #fff;
+}
+.grid-content-text:hover ul.grid-content-list li:before{
+    background-color: #fff;
 }
 .grid-content-text-icon:hover::after {
     content: "\f061";
@@ -495,9 +500,9 @@ div[class^='flex-']{
     width: 40px;
     border: 1px solid #dfdfdf;
     box-shadow: 0 0 5px #ccc;
-    cursor: pointer;
     outline: none;
     z-index: 9999;
+    cursor: pointer;
 }
 .carousel__button--prev{
 	left: 0;
@@ -523,22 +528,24 @@ div[class^='flex-']{
 	flex-wrap: nowrap;
 }
 .type-card .carousel__item {
-    height: 250px;
+    height: 25rem;
+    margin-right: 1.5rem;
+    position: relative;
 
 }
 .carousel__item {
-	flex: 1 0 250px;
+	flex: 1 0 25rem;
 	text-align: center;
-	line-height: 100px;
     background-size: cover;
 }
 .type-card .carousel__item{
-    padding-right: 2rem;
     color: white;
     font-weight: bold;
     text-shadow: 0 0 5px #000;
     opacity: .8; 
     cursor: pointer;
+    display: flex;
+    align-items: flex-end;
 }
 .type-card .carousel__item:hover {
     opacity: 1;
@@ -550,35 +557,14 @@ div[class^='flex-']{
     .type-card .carousel__item a:hover{
         color: #fff;
         text-decoration: none;
+        text-align: center;
+        margin: 0 auto 2rem;
     }
     
 
 section {
     position: relative;
 }
-/*
-.js-carousel-item.brisbane {
-    background-image: url(../img/brisbane-koala-1-red.jpg);
-}
-.js-carousel-item.new-york {
-    background-image: url(../img/new-york-taxi-card-1-red.jpg);
-}
-.js-carousel-item.manila {
-    background-image: url(../img/manila-skyline-1-red.jpg);
-}
-.js-carousel-item.melbourne {
-    background-image: url(../img/melbourne-card-1-red.jpg);
-}
-.js-carousel-item.montreal {
-    background-image: url(../img/montreal-card-1-red.jpg);
-}
-.js-carousel-item.sydney {
-    background-image: url(../img/sydney-bridge-1-red.jpg);
-}
-.js-carousel-item.tokyo {
-    background-image: url(../img/tokyo-city-1-red.jpg);
-}
-*/
 
 header.page-locations{
     background-image:url(../img/byron-bay-beach-1-red.jpg);
@@ -1299,4 +1285,90 @@ a.faq-title::after{
     font-family: "FontAwesome";
     position: absolute;
     right: 0;
+}
+
+/* GRID CONTENT LIST */
+ul.grid-content-list{ margin: 0; padding: 0 3rem 0 0; }
+ul.grid-content-list li { 
+    list-style: none; 
+    margin-bottom: 1.5rem; 
+    font-size: 1.9rem; 
+    line-height: 2.8rem; 
+    color: rgba(0,0,0,0.85);
+    position: relative;
+    padding-left: 3rem;
+}
+ul.grid-content-list li::before{
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    display: inline-block;
+    background-color: #dfdfdf;
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+}
+
+.icon-location{
+    height: 15px;
+    width: 15px;
+    background: url(../img/icons/ic-location.png) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+}
+
+/* Testimonial */
+.carousel.type-testimonial .js-carousel-item {
+    padding: 2.5rem 0;
+    flex: 1 0 35rem;
+}
+.carousel.type-testimonial .js-carousel-item:hover .testimonial-content-wrap{
+    background-color: #fff;
+    box-shadow: 0 0 0.2rem 0.1rem rgba(0,0,0,0.05);
+    transform: scale(1.1);
+}
+.carousel.type-testimonial .testimonial-content-wrap{
+    background-color: #F6F7F9;
+    padding: 3rem;
+}
+.carousel.type-testimonial .testimonial-content-wrap h3{
+    color: #454545;
+    font-size: 2.4rem;    
+}
+.carousel.type-testimonial .testimonial-content-wrap p{
+    color: #454545;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+/* Carousel blog */
+.js-carousel.type-blog{
+
+}
+.js-carousel.type-blog .blog-wrap{
+    margin-right: 2rem;
+}
+.js-carousel.type-blog .post-thumb{
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    padding: 1.5rem;
+}
+.js-carousel.type-blog .post-content-wrap{
+    padding: 1.5rem 0;
+    text-align: left;
+}
+.js-carousel.type-blog h3{
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #0E0E0E;
+    margin: 0 0 1rem;
+    text-align: left;
+}
+.js-carousel.type-blog span.post-meta{
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+    color: rgba(0,0,0,0.55);
 }
