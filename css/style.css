@@ -117,12 +117,14 @@ header.page-home{
     box-sizing: border-box;
     position: absolute;
     z-index: 1000;
+    display: none;
 }
 .top-bar.fixed{
     position: fixed;
     height: auto !important;
     background-color: rgba(0,0,0,0.75);
     z-index: 9999 !important;
+    display: block;
 }
 .top-bar.fixed .logo-wrap a{
     line-height: 6rem;
@@ -186,7 +188,7 @@ header .container{
 }
 .nav li ul.sub-menu {
     display: none;
-    top: 9.8rem;
+    top: 6rem;
     left: 0;
     width: 15rem;
     background: #fff;
@@ -346,10 +348,10 @@ form.search-locations fieldset.location {
     overflow: hidden;
 }
 input {
-    height: 4rem;
+    height: auto;
     width: 100%;
     margin: 0;
-    padding: .5rem 1.5rem;
+    padding: 1rem 1.5rem;
     line-height: 3rem;
     box-sizing: border-box;
 }
@@ -364,6 +366,9 @@ form.search-locations input::placeholder {
     font-family: FontAwesome;
     font-size: 1.4rem;
     letter-spacing: 0.1rem;
+}
+form input[type='submit']{
+    cursor: pointer;
 }
 .btn {
     background-color: #F8B30F;
@@ -672,6 +677,7 @@ header.page-locations{
     overflow: hidden;
     letter-spacing: .15rem;
     word-spacing: .2rem;
+    text-transform: uppercase;
 }
 
 .type-card-details .carousel-item-title, 
@@ -780,6 +786,7 @@ header.page-experience{
 .grid-item-wrap.item-per-row-4 div.carousel__item{
     flex-basis: calc(25% - 1.5rem);
     margin: 0 1.5rem 1.65rem 0 !important;
+    flex-wrap: wrap;
 }
 
 /* LABRATORY PAGE */
@@ -1342,6 +1349,10 @@ ul.grid-content-list li::before{
     font-size: 1.6rem;
     line-height: 2.4rem;
 }
+.carousel.type-testimonial .testimonial-content-wrap img{
+    margin-bottom: 2rem;
+}
+
 
 /* Carousel blog */
 .js-carousel.type-blog{
