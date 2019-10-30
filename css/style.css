@@ -8,16 +8,6 @@
 html { 
     font-size: 10px;
 }
-@media screen and (max-width: 480px){
-    html {
-        font-size: 8px;
-    }
-}
-@media screen and (min-width: 1600px){
-    html {
-        font-size: 12px;
-    }
-}
 .p-1x {
     padding: 3rem;
 }
@@ -519,9 +509,11 @@ div[class^='flex-']{
 .carousel__container {
 	overflow: hidden;
 }
+/*
 .type-card .carousel__container {
     height: 250px;
 }
+*/
 .carousel__list{
 	position: relative;
 	display: flex;
@@ -1297,7 +1289,7 @@ ul.grid-content-list{ margin: 0; padding: 0 3rem 0 0; }
 ul.grid-content-list li { 
     list-style: none; 
     margin-bottom: 1.5rem; 
-    font-size: 1.9rem; 
+    font-size: 1.6rem; 
     line-height: 2.8rem; 
     color: rgba(0,0,0,0.85);
     position: relative;
@@ -1380,4 +1372,48 @@ ul.grid-content-list li::before{
     font-size: 1.3rem;
     line-height: 2.4rem;
     color: rgba(0,0,0,0.55);
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width:768px){
+    html{
+        font-size: 8px;
+    }
+    .landing-content,
+    .container{
+        max-width: 95% !important;
+    }
+    form.search-locations {
+        display: inline-block;
+    }
+    form.search-locations fieldset{
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .grid-content-text .p-2x{
+        padding: 2rem;
+    }
+    .nav-wrap{
+        display: none;
+    }
+    .logo-wrap{
+        height: 5rem;
+    }
+    .item-holder{
+        display: block;
+    }
+    .item-holder .item{
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .item-holder .item .item-image{
+        min-height: 12.5rem;
+    }
+
+    .grid-item-wrap{
+        display: block;
+    }
 }
