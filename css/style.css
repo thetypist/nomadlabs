@@ -3,7 +3,6 @@
 * We will use flex to make columns and rem for gutters and elements distance.
 * REM depends on the font-size of root element that is html. We've set html font size 10px for easier calculation of rem.
 * We are using rem because it gives us more control to define different font-size, margin, padding and other propertiese based on screen sizes.
-* For 
 */
 
 html { 
