@@ -113,11 +113,10 @@ header.page-home{
     width: 100%;
     height: 10rem;
     padding: 0;
-    background: rgba(0,0,0,0.5);
+    background: transparent;
     box-sizing: border-box;
     position: absolute;
     z-index: 1000;
-    display: none;
 }
 .top-bar.fixed{
     position: fixed;
