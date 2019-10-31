@@ -23,4 +23,12 @@ $(document).ready(function(){
 	    }
 	});
 
+	$(document).on('click','.clickable',function(e){
+		e.preventDefault();
+		var l = $(this).attr('data-href');
+		if(l != ''){
+			window.location = l;
+		}
+	})
+
 })

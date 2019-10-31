@@ -327,7 +327,8 @@ form.search-locations fieldset {
     flex: 1;
     background-color: white;
     border-right: 1px solid #ccc;
-    padding: 0px;
+    padding: 0;
+    margin: 0;
 }
 form.search-locations fieldset.location {
     flex: 2;
@@ -394,18 +395,6 @@ fieldset.submit {
     flex: 3;
     padding: 2rem 1.5rem;
 }
-.item-image.locations {
-    background-image: url(../img/madrid-city-1-red.jpg);
-}
-.item-image.experiences {
-    background-image: url(../img/byron-bay-waterfall-1-red.jpg)
-}
-.item-image.labs {
-    background-image: url(../img/lab-listing-living-red.jpg)
-}
-.item-image.stories {
-    background-image: url(../img/cheerful-friends-1-red.jpg)
-}
 .grid-content {
     display: flex;
 }
@@ -443,12 +432,19 @@ div[class^='flex-']{
 .grid-content-text:hover ul.grid-content-list li:before{
     background-color: #fff;
 }
-.grid-content-text-icon:hover::after {
-    content: "\f061";
-    font-family: FontAwesome;
+.grid-content-learn-more-btn::after{
+    content: "Learn More";
     position: absolute;
     bottom: 3rem;
     right: 6rem;
+    background: #f8b30f;
+    color: #fff;
+    visibility: hidden;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+}
+.grid-content-learn-more-btn:hover::after {
+    visibility: visible;
 }
 .grid-content-btn{
     height: auto;
@@ -754,9 +750,6 @@ header.page-locations{
 .underline{
     text-decoration: underline;
 }
-header.page-experience{
-    background-image: url(../img/brisbane-skyline-1-red.jpg);
-}
 .landing-title .top,
     .landing-title .bottom{ 
         width: 100%; 
@@ -874,14 +867,14 @@ header.page-experience{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 }
 .flex-container .primary-content{
     flex: 4;
     padding-right: 30px;
 }
 .flex-container .sidebar{
-    flex: 1;
+    flex: 1.5;
 }
 .section-title{
     font-size: 2.4rem;
@@ -916,12 +909,14 @@ header.page-experience{
 ul{
     margin: 0;
     padding: 0;
+    display: block;
+}
+ul.column-3{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 ul.column-3 li{
-    flex-basis: calc(33.3333%);
+    flex-basis: 33.3333%;
     padding: 0 2rem 2rem 0;
 }
 ul.list-bullet li{
@@ -1191,7 +1186,7 @@ ul.list-bullet li{
     margin-bottom: 3rem;
 }
 .footer ul{
-
+    margin-bottom: 2rem;
 }
 .footer ul li{
     list-style: none;
@@ -1374,6 +1369,73 @@ ul.grid-content-list li::before{
     color: rgba(0,0,0,0.55);
 }
 
+/* FORM ELEMENTS */
+label{
+    font-size: 1.4rem;
+    color: #000;
+    line-height: 1.4rem;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+fieldset{
+    margin: 0.5rem 0 1rem;
+}
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='tel'],
+input[type='url'],
+input[type='password'],
+select{
+    background: transparent;
+    border: 1px solid #EAEAEA;
+    border-radius: 4px;
+    height: auto;
+    padding: 0.5rem 1.25rem;
+    line-height: 4rem;
+    width: 100%;
+    display: inline-block;
+    outline: none;
+}
+input::placeholder{
+    color: rgba(14,14,14,0.37);
+}
+select{
+    height: 5rem;
+    -webkit-appearance: none;
+    appearance: none;
+    background: url(../img/icons/ic_down_light.png) no-repeat right center;
+}
+input[type='submit']{
+    background-color: #F8B30F;
+    color: #fff;
+    border: 1px solid #F8B30F;
+    border-radius: 4px;
+}
+
+form.sidebar-booking{
+    border: 1px solid #979797;
+    padding: 3rem;
+}
+fieldset.checkin,
+fieldset.checkout{
+    width: 50%;
+    float: left;
+}
+fieldset.checkin input{
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+fieldset.checkout input{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.clickable{
+    cursor: pointer;
+}
 
 /* MEDIA QUERIES */
 @media screen and (max-width:768px){
