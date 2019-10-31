@@ -8,6 +8,9 @@
 html { 
     font-size: 10px;
 }
+.clearfix{
+    clear: both;
+}
 .p-1x {
     padding: 3rem;
 }
@@ -176,12 +179,15 @@ header .container{
 }
 .nav li ul.sub-menu {
     display: none;
-    top: 6rem;
+    top: 9rem;
     left: 0;
     width: 15rem;
     background: #fff;
     padding: 2rem;
     box-shadow: 0 0 14px rgba(0,0,0,0.14)
+}
+.top-bar.fixed .nav li ul.sub-menu{
+    top: 6rem;
 }
 .nav li ul.sub-menu li{
     width: 100%;
@@ -336,6 +342,13 @@ form.search-locations fieldset.location {
     border-bottom-left-radius: 5px;
     overflow: hidden;
 }
+form.search-locations input[type='submit']{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+form.search-locations fieldset.guestnumber{
+    border-right: none;
+}
 input {
     height: auto;
     width: 100%;
@@ -432,43 +445,22 @@ div[class^='flex-']{
 .grid-content-text:hover ul.grid-content-list li:before{
     background-color: #fff;
 }
-.grid-content-learn-more-btn::after{
-    content: "Learn More";
-    position: absolute;
-    bottom: 3rem;
-    right: 6rem;
-    background: #f8b30f;
-    color: #fff;
-    visibility: hidden;
-    text-transform: uppercase;
-    padding: 1rem 3rem;
-}
-.grid-content-learn-more-btn:hover::after {
-    visibility: visible;
-}
 .grid-content-btn{
     height: auto;
-    padding: 1.5rem 3rem;
-    background-color: #D8D8D8;
+    padding: 1rem 3rem;
+    background-color: #F8B30F;
     border: none;
     line-height: 2rem;
-    font-size: 2rem;
-    color: #454545;
+    font-size: 1.5rem;
+    color: #fff;
     text-transform: uppercase;
-    float: right;
     text-decoration: none;
-    display: inline-block;
     visibility: hidden;
+    float:right;
 }
 .grid-content-text:hover .grid-content-btn{
     visibility: visible;
 }
-
-.grid-content-btn:hover{
-    background-color: #fff;
-    transform: scale(1.1);
-}
-
 .why-us-image {
     background: url(../img/tattooed-chick-working-red.jpg) center;
     background-size: cover;
@@ -518,25 +510,22 @@ div[class^='flex-']{
 .carousel__list.unwrap{
 	flex-wrap: nowrap;
 }
-.type-card .carousel__item {
-    height: 25rem;
-    margin-right: 1.5rem;
-    position: relative;
-
-}
 .carousel__item {
 	flex: 1 0 25rem;
 	text-align: center;
     background-size: cover;
 }
 .type-card .carousel__item{
+    height: 25rem;
+    margin-right: 1.5rem;
+    position: relative;
     color: white;
     font-weight: bold;
     text-shadow: 0 0 5px #000;
-    opacity: .8; 
+    opacity: .9; 
     cursor: pointer;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 .type-card .carousel__item:hover {
     opacity: 1;
@@ -549,18 +538,14 @@ div[class^='flex-']{
         color: #fff;
         text-decoration: none;
         text-align: center;
-        margin: 0 auto 2rem;
+        margin: 0 auto;
+        width: 100%;
     }
     
 
 section {
     position: relative;
 }
-
-header.page-locations{
-    background-image:url(../img/byron-bay-beach-1-red.jpg);
-}
-
 .item-subtitle{
     font-size: 1.3rem;
     color: #777;
